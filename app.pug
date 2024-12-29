@@ -53,6 +53,23 @@ html#hELLO(
         hljsDark: '[##_var_hljs-dark_##]',
         headerStyle: '[##_var_header-style_##]'
       }
+        //- MathJax 기본 설정
+  script#MathJax-script(
+    async 
+    src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  )
+
+  //- 수식 배경색을 불투명 흰색으로 고정
+  style.
+    mjx-container[jax="CHTML"] {
+      background-color: white !important;
+    }
+    
+    mjx-container[jax="CHTML"][display="true"] {
+      background-color: white !important;
+      padding: 1em;
+      margin: 1em 0;
+    }
 
   body(
     id='[##_body_id_##]'
